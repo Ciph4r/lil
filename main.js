@@ -47,8 +47,7 @@ const Lil = () => {
         next = next2
         next2 = next2.next
       }
-      console.log(next)
-      console.log(next2)
+
       next.next = null
       return next2.value
     },
@@ -64,8 +63,18 @@ const Lil = () => {
     }
     },
     removeAt: function(num){
-
-      this.getAt(num)
+      if (!this.head){
+        return this.head
+      }else {
+        let current = this.head
+        let current2 = current.next
+        for (let i = 1 ; i < num ; i++){
+          current = current2
+          current2 = current2.next
+        }
+        current.next = current2.next
+        return current2.value
+      }
     }
   }
 }
