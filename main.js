@@ -76,6 +76,15 @@ const Lil = () => {
         return current2.value
       }
     }
+ //////// 2nd solution alternative
+    // let x = this.getAt(num)
+    // let current = this.head
+    // while (current.next.value !== x){
+    // current = current.next
+    // }
+    // current.next = current.next.next
+    // return x
+
   }
 }
 
